@@ -1,6 +1,6 @@
 <h4 class="text-center">Login</h4>
 
-<form class="form mt-4" (ngSubmit)="login()">
+<form class="form mt-4" (ngSubmit)="login()" #loginForm="ngForm">
   <div class="form-group">
     <input
       class="form-control"
@@ -31,5 +31,11 @@
     ></app-mensagem>
   </div>
 
-  <button class="btn btn-primary btn-block" type="submit">Login</button>
+  <button
+    class="btn btn-primary btn-block"
+    [disabled]="loginForm.invalid"
+    type="submit"
+  >
+    Login
+  </button>
 </form>
