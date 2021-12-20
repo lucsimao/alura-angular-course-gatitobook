@@ -1,6 +1,33 @@
 # Gatitobook
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+This project is the artifact of the course [Angular: Boas práticas em arquiteturas e formulários](https://cursos.alura.com.br/completeCourse/angular-boas-praticas-arquiteturas-formularios)
+
+Content:
+
+- Angular Introduction
+  - Module
+  - Component
+  - Service
+- Date Pipe
+- Output and Input
+- Injectable
+- Data Binding
+  - Two Way Data Bind [()]
+  - Property Bind []
+  - Event Binding ()
+- Interpolation
+- NgFor
+- NgIf
+- Routing
+- Lazy Load
+- Template driven forms
+- Reactive forms
+- HttpClient
+- RxJS (Reactive Extensions for JavaScript)
+  - Observable
+  - Subject
+- Pipe async
+- JWT
 
 ## Development server
 
