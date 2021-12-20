@@ -80,6 +80,10 @@
       *ngIf="novoUsuarioForm.get('password')?.errors?.['minlength'] && novoUsuarioForm.get('password')?.touched"
       mensagem="Senha teve ter no mínimo 8 caracteres"
     ></app-mensagem>
+    <app-mensagem
+      *ngIf="novoUsuarioForm.errors?.['senhaIgualUsuario']"
+      mensagem="Senha deve ser diferente do usuário"
+    ></app-mensagem>
   </div>
 
   <button class="btn btn-primary btn-block">Cadastro</button>
