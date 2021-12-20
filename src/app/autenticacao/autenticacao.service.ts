@@ -28,6 +28,7 @@ export class AutenticacaoService {
       .pipe(
         tap((res) => {
           const authToken = res.headers.get('x-access-token') ?? '';
+          console.log(authToken);
           this.usuarioService.salvaToken(authToken);
         })
       );
