@@ -2,12 +2,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DetalheAnimalComponent } from './detalhe-animal/detalhe-animal.component';
 import { ListaAnimaisComponent } from './lista-animais/lista-animais.component';
+import { ListaAnimaisResolver } from './lista-animais/lista-animais.resolver';
 import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
     path: '',
     component: ListaAnimaisComponent,
+    resolve: {
+      animais: ListaAnimaisResolver,
+    },
   },
   {
     path: ':animalId',

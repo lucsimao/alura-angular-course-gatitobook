@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, switchMap } from 'rxjs';
 
+import { ActivatedRoute } from '@angular/router';
 import { Animais } from './../animais';
-import { AnimaisService } from './../animais.service';
-import { UsuarioService } from './../../autenticacao/usuario/usuario.service';
 
 @Component({
   selector: 'app-lista-animais',
@@ -11,19 +9,11 @@ import { UsuarioService } from './../../autenticacao/usuario/usuario.service';
   styleUrls: ['./lista-animais.component.css'],
 })
 export class ListaAnimaisComponent implements OnInit {
-  animais$!: Observable<Animais>;
+  animais!: Animais;
 
-  constructor(
-    private readonly usuarioService: UsuarioService,
-    private readonly animaisService: AnimaisService
-  ) {}
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.animais$ = this.usuarioService.retornaUsuario().pipe(
-      switchMap((usuario) => {
-        const userName = usuario.name ?? '';
-        return this.animaisService.listaDoUsuario(userName);
-      })
-    );
+    this.animais = this.activatedRoute.snapshot.data['animais'];
   }
 }
