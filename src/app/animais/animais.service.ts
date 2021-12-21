@@ -1,6 +1,6 @@
 import { Animais, Animal } from './animais';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TokenService } from './../autenticacao/token.service';
@@ -18,16 +18,10 @@ export class AnimaisService {
   ) {}
 
   public listaDoUsuario(nomeDoUsuario: string): Observable<Animais> {
-    const token = this.tokenService.retornaToken();
-    const headers = new HttpHeaders().append('x-access-token', token);
-    return this.httpClient.get<Animais>(`${API}/${nomeDoUsuario}/photos`, {
-      headers,
-    });
+    return this.httpClient.get<Animais>(`${API}/${nomeDoUsuario}/photos`);
   }
 
   public buscaPorId(id: number): Observable<Animal> {
-    const token = this.tokenService.retornaToken();
-    const headers = new HttpHeaders().append('x-access-token', token);
-    return this.httpClient.get<Animal>(`${API}/photos/${id}`, { headers });
+    return this.httpClient.get<Animal>(`${API}/photos/${id}`);
   }
 }
