@@ -14,10 +14,10 @@ export class NovoUsuarioService {
   public cadastraNovoUsuario(
     novoUsuario: NovoUsuario
   ): Observable<NovoUsuario> {
-    return this.httpClient.post<NovoUsuario>(`${API}/signup`, novoUsuario);
+    return this.httpClient.post<NovoUsuario>(`${API}/user/signup`, novoUsuario);
   }
 
   verificaUsuarioExistente(nomeUsuario: string): Observable<boolean> {
-    return this.httpClient.get<boolean>(`${API}/exists/${nomeUsuario}`);
+    return this.httpClient.get<boolean>(`${API}/user/exists/${nomeUsuario}`);
   }
 }

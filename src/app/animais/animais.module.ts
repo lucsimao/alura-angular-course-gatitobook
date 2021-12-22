@@ -8,6 +8,7 @@ import { GradeFotosAnimaisComponent } from './grade-fotos-animais/grade-fotos-an
 import { ListaAnimaisComponent } from './lista-animais/lista-animais.component';
 import { NgModule } from '@angular/core';
 import { SharedModule } from './../shared/shared.module';
+import { NovoAnimalComponent } from './novo-animal/novo-animal.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SharedModule } from './../shared/shared.module';
     GradeFotosAnimaisComponent,
     DetalheAnimalComponent,
     ComentariosComponent,
+    NovoAnimalComponent,
   ],
   imports: [CommonModule, AnimaisRoutingModule, CartaoModule, SharedModule],
 })
