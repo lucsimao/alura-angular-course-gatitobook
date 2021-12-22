@@ -28,6 +28,15 @@ Content:
   - Subject
 - Pipe async
 - JWT
+- ActivatedRoute
+- Interceptor
+- MapTo CatchError
+- Resolvers
+- ngClass
+- FormData
+- FormControlName
+- Empacotamento do projeto para produção
+- Http Server
 
 ## Development server
 
