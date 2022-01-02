@@ -1,6 +1,6 @@
 # Gatitobook
 
-This project is the artifact of the course [Angular: Boas práticas em arquiteturas e formulários](https://cursos.alura.com.br/completeCourse/angular-boas-praticas-arquiteturas-formularios)
+This project is the artifact of the course [Angular: Boas práticas em arquiteturas e formulários](https://cursos.alura.com.br/completeCourse/angular-boas-praticas-arquiteturas-formularios) and [Angular: Controle o fluxo de navegação](https://cursos.alura.com.br/course/angular-controle-fluxo-navegacao)
 
 Content:
 
